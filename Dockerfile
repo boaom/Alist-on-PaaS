@@ -8,7 +8,7 @@ RUN apk add --no-cache curl runit bash tzdata \
     && rm /workdir/install.sh \
     && ln -s /workdir/service/* /etc/service/
 
-ENV PORT=3000
+ENV $PORT=3000
 ENV TZ=UTC
 
 EXPOSE 3000
