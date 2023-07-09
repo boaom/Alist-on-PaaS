@@ -8,9 +8,9 @@ RUN apk add --no-cache curl runit bash tzdata \
     && rm /workdir/install.sh \
     && ln -s /workdir/service/* /etc/service/
 
-ENV $PORT=3000
+ENV PORT=3333
 ENV TZ=UTC
 
-EXPOSE 3000
+EXPOSE 3333
 
 ENTRYPOINT ["runsvdir", "/etc/service"]
